@@ -8,8 +8,11 @@ __pycache__/
 dist/
 build/
 
-# Outputs
+# Outputs (her çalıştırmada değişir, git'e eklenmez)
 outputs/
+
+# Sample outputs (git'e eklenir - örnek çıktılar için)
+# samples/
 
 # IDE
 .vscode/

@@ -1,0 +1,122 @@
+{
+  "config": {
+    "alpha": 0.1,
+    "gamma": 0.95,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.01,
+    "epsilon_decay": 0.995,
+    "self_play_episodes": 5000,
+    "cross_play_episodes": 5000,
+    "baseline_episodes": 3000,
+    "tournament_games": 500,
+    "moving_avg_window": 200,
+    "log_interval": 500,
+    "convergence_threshold": 0.8,
+    "seed": 42,
+    "output_dir": "outputs"
+  },
+  "training": {
+    "Q self-play": {
+      "wins": 1552,
+      "draws": 2987,
+      "losses": 461,
+      "win_rate": 0.3104,
+      "draw_rate": 0.5974,
+      "loss_rate": 0.0922,
+      "convergence_episode": 4721
+    },
+    "SARSA self-play": {
+      "wins": 1142,
+      "draws": 3298,
+      "losses": 560,
+      "win_rate": 0.2284,
+      "draw_rate": 0.6596,
+      "loss_rate": 0.112,
+      "convergence_episode": null
+    },
+    "Cross-play (Q)": {
+      "wins": 344,
+      "draws": 1888,
+      "losses": 2768,
+      "win_rate": 0.0688,
+      "draw_rate": 0.3776,
+      "loss_rate": 0.5536,
+      "convergence_episode": null
+    },
+    "Cross-play (SARSA)": {
+      "wins": 2768,
+      "draws": 1888,
+      "losses": 344,
+      "win_rate": 0.5536,
+      "draw_rate": 0.3776,
+      "loss_rate": 0.0688,
+      "convergence_episode": 3779
+    },
+    "Q vs Random (X)": {
+      "wins": 2914,
+      "draws": 73,
+      "losses": 13,
+      "win_rate": 0.9713333333333334,
+      "draw_rate": 0.024333333333333332,
+      "loss_rate": 0.004333333333333333,
+      "convergence_episode": 200
+    },
+    "SARSA vs Random (X)": {
+      "wins": 2645,
+      "draws": 277,
+      "losses": 78,
+      "win_rate": 0.8816666666666667,
+      "draw_rate": 0.09233333333333334,
+      "loss_rate": 0.026,
+      "convergence_episode": 200
+    }
+  },
+  "tournament": {
+    "Q vs Random": {
+      "wins": 364,
+      "draws": 40,
+      "losses": 96,
+      "win_rate": 0.728,
+      "draw_rate": 0.08,
+      "loss_rate": 0.192
+    },
+    "SARSA vs Random": {
+      "wins": 361,
+      "draws": 51,
+      "losses": 88,
+      "win_rate": 0.722,
+      "draw_rate": 0.102,
+      "loss_rate": 0.176
+    },
+    "Q vs SARSA": {
+      "wins": 0,
+      "draws": 250,
+      "losses": 250,
+      "win_rate": 0.0,
+      "draw_rate": 0.5,
+      "loss_rate": 0.5
+    },
+    "Q vs Minimax": {
+      "wins": 0,
+      "draws": 266,
+      "losses": 234,
+      "win_rate": 0.0,
+      "draw_rate": 0.532,
+      "loss_rate": 0.468
+    },
+    "SARSA vs Minimax": {
+      "wins": 0,
+      "draws": 273,
+      "losses": 227,
+      "win_rate": 0.0,
+      "draw_rate": 0.546,
+      "loss_rate": 0.454
+    }
+  },
+  "q_variance": {
+    "Q-X": 0.002684122882783413,
+    "Q-O": 0.0008549624471925199,
+    "SARSA-X": 0.0026319052558392286,
+    "SARSA-O": 0.0007407655939459801
+  }
+}

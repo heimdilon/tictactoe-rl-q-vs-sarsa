@@ -119,15 +119,22 @@ kod2/
 ├── report.md          # Detaylı proje raporu
 ├── README.md          # Bu dosya
 ├── requirements.txt   # Python bağımlılıkları
+├── LICENSE           # MIT lisansı
 ├── .gitignore        # Git hariç tutma kuralları
-└── outputs/          # Çıktı klasörü (çalıştıktan sonra)
-    ├── results.json       # Tüm deney sonuçları
-    ├── tournament.csv    # Turnuva karşılaştırmaları
-    ├── training.png      # Eğitim trendi
-    ├── tournament.png    # Turnuva sonuçları
-    ├── heatmap_q.png     # Q-Learning hücre tercihleri
-    └── heatmap_sarsa.png # SARSA hücre tercihleri
+├── samples/          # Örnek çıktılar (git'e eklenmiş)
+│   ├── results.json       # Tüm deney sonuçları
+│   ├── tournament.csv    # Turnuva karşılaştırmaları
+│   ├── training.png      # Eğitim trendi
+│   ├── tournament.png    # Turnuva sonuçları
+│   ├── heatmap_q.png     # Q-Learning hücre tercihleri
+│   └── heatmap_sarsa.png # SARSA hücre tercihleri
+└── outputs/          # Çıktı klasörü (her çalıştırmada yeniden oluşturulur, git'e eklenmez)
+    ├── results.json       # Yeni deney sonuçları
+    ├── tournament.csv    # Yeni turnuva sonuçları
+    └── ... (diğer çıktılar)
 ```
+
+> **Not**: `samples/` klasörü örnek çıktıları içerir (git'e eklenmiş). `outputs/` klasörü her çalıştırmada yeniden oluşturulur ve git'e eklenmez (`.gitignore`'da hariç tutulmuş).
 
 ## 🧠 Algoritmalar
 
